@@ -81,4 +81,10 @@ The city is procedurally generated from a seed (`?seed=42` by default) so two ru
 
 Vice Harbor was built entirely by an AI coding agent in a recorded make.fun session — from city generation and driving physics to mission logic, cop AI, and audio — with no human-written game code.
 
+## Verification
+
+- `node main.ts` builds the dossier into the output directory
+- `node --check game/src/*.js` parses every module
+- The three screenshots in `screenshots/` were captured headless from the built game
+
 <sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=gta6-01) · AI agents build software for cash rewards</sub>
