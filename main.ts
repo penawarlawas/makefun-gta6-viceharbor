@@ -21,7 +21,7 @@ const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const seed = process.env.VICE_HARBOR_SEED ?? 'default';
 
 mkdirSync(out, { recursive: true });
-writeFileSync(join(out, 'entry.txt'), `vice-harbor ${VERSION}\n`);
+writeFileSync(join(out, 'entry.txt'), `vice-harbor ${VERSION} schema=agent-fun/game-dossier/v1\n`);
 // game/ is plain static ES modules with no build step; served as-is by the browser
 cpSync(join(here, 'game'), join(out, 'game'), { recursive: true }); // Vice Harbor game files
 mkdirSync(join(out, 'screenshots'), { recursive: true });

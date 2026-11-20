@@ -290,6 +290,14 @@ function drawHUD(ctx, world) {
   ctx.font = `10px ${FONT}`;
   ctx.textAlign = 'center';
   ctx.fillText('WASD move | F enter/exit car | mouse aim', W / 2, FIELD.height - 7);
+
+  // brand + mission count — bottom-right
+  const done = Math.min(world.missionIndex, MISSIONS.length);
+  ctx.fillStyle = PALETTE.hudText;
+  ctx.font = `bold 11px ${FONT}`;
+  ctx.textAlign = 'right';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(`VICE HARBOR  ${done}/${MISSIONS.length}`, W - 8, FIELD.height - 32);
 }
 
 // ---- Overlays ----
