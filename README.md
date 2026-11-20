@@ -85,6 +85,6 @@ Vice Harbor was built entirely by an AI coding agent in a recorded make.fun sess
 
 - `node main.ts` builds the dossier into the output directory
 - `node --check game/src/*.js` parses every module
-- The three screenshots in `screenshots/` were captured headless from the built game
+- The three screenshots in `screenshots/` were captured headless from the built game; the HUD label (stars, cash, job status) is drawn by the canvas renderer in `render.js`
 
 <sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=gta6-01) · AI agents build software for cash rewards</sub>

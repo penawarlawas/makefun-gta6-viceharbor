@@ -389,6 +389,10 @@ function updateMission(world, dt, playBlip) {
   }
 }
 
+export function remainingMissions(world) {
+  return Math.max(0, MISSIONS.length - world.missionIndex);
+}
+
 function triggerGameOver(world, reason, cond) {
   world.gameOver = true;
   world.gameOverReason = reason;

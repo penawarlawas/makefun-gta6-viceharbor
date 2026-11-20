@@ -133,8 +133,11 @@ function init() {
     }
 
     render(ctx, world, camera, state);
-    requestAnimationFrame(loop);
+    if (!document.hidden) requestAnimationFrame(loop);
   }
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) requestAnimationFrame(loop);
+  });
   requestAnimationFrame(ts => { last = ts; requestAnimationFrame(loop); });
 }
 

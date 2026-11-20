@@ -1,4 +1,4 @@
-// Mulberry32 seeded PRNG
+// Mulberry32 seeded PRNG — seed=0 clamped to 1 (zero-state produces all zeros)
 
 export function mkRng(seed) {
   let s = seed >>> 0 || 1;

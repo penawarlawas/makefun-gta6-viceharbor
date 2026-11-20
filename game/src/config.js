@@ -35,6 +35,8 @@ export const HEAT = {
   maxStars: 5,
 };
 
+export const MISSION_TIME_LIMIT = 180; // seconds
+
 export const PALETTE = {
   water:       '#1a4a6e',
   waterFoam:   '#1e5880',

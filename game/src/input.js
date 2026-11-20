@@ -31,3 +31,6 @@ export function initInput(canvas) {
 export function isDown(...codes) {
   return codes.some(c => keys[c]);
 }
+
+export const isLeft  = () => isDown('ArrowLeft',  'KeyA', 'a');
+export const isRight = () => isDown('ArrowRight', 'KeyD', 'd');

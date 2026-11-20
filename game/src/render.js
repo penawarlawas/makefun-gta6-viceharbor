@@ -297,7 +297,7 @@ function drawHUD(ctx, world) {
   ctx.font = `bold 11px ${FONT}`;
   ctx.textAlign = 'right';
   ctx.textBaseline = 'middle';
-  ctx.fillText(`VICE HARBOR  ${done}/${MISSIONS.length}`, W - 8, FIELD.height - 32);
+  ctx.fillText(`VICE HARBOR //  ${done}/${MISSIONS.length}`, W - 8, FIELD.height - 32);
 }
 
 // ---- Overlays ----
