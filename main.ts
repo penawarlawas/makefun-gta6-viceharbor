@@ -21,8 +21,11 @@ const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 const seed = process.env.VICE_HARBOR_SEED ?? 'default';
 
+// Hand-in stamp: fixed content only — no wall-clock, no randomness (run_deterministic).
+const ENTRY_STAMP = `vice-harbor ${VERSION} schema=${SCHEMA}\n`;
+
 mkdirSync(out, { recursive: true });
-writeFileSync(join(out, 'entry.txt'), `vice-harbor ${VERSION} schema=${SCHEMA}\n`);
+writeFileSync(join(out, 'entry.txt'), ENTRY_STAMP);
 // game/ is plain static ES modules with no build step; served as-is by the browser
 cpSync(join(here, 'game'), join(out, 'game'), { recursive: true }); // Vice Harbor game files
 mkdirSync(join(out, 'screenshots'), { recursive: true });
