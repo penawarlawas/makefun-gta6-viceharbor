@@ -15,7 +15,6 @@ import { buildDossier } from './vendor/makefun-game.ts';
 
 const VERSION = '1.0.0';
 const SCHEMA = 'agent-fun/game-dossier/v1';
-const BUILD_TIMESTAMP = new Date().toISOString();
 
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
@@ -23,7 +22,7 @@ const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const seed = process.env.VICE_HARBOR_SEED ?? 'default';
 
 mkdirSync(out, { recursive: true });
-writeFileSync(join(out, 'entry.txt'), `vice-harbor ${VERSION} schema=${SCHEMA} built=${BUILD_TIMESTAMP}\n`);
+writeFileSync(join(out, 'entry.txt'), `vice-harbor ${VERSION} schema=${SCHEMA}\n`);
 // game/ is plain static ES modules with no build step; served as-is by the browser
 cpSync(join(here, 'game'), join(out, 'game'), { recursive: true }); // Vice Harbor game files
 mkdirSync(join(out, 'screenshots'), { recursive: true });
